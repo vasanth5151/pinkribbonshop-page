@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Corporate Gift Hampers with Custom Branding &amp; Bulk Pricing | Aurelia</title>
+  <meta name="description" content="Premium corporate gift hampers for employees, clients and partners. Custom logo branding, bulk pricing and pan-India delivery. Request a corporate quote today.">
+  <meta name="theme-color" content="#14110F">
+  <link rel="canonical" href="https://www.example.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Corporate Gifts That Build Meaningful Connections | Aurelia">
+  <meta property="og:description" content="Premium gift hampers curated for employees, clients and business partners, with custom branding, bulk pricing and reliable delivery.">
+  <meta property="og:image" content="assets/images/hero-corporate-gifting.webp">
+  <meta property="og:url" content="https://www.example.com/">
+  <meta property="og:site_name" content="Aurelia Corporate Gifting">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/images/prs-logo.webp" type="image/webp">
+
+  <!-- Fonts: Italiana (display) + Poppins (UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="assets/images/hero-corporate-gifting.webp" fetchpriority="high">
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Flags JS as available before first paint, so the scroll-reveal styles
+       only ever hide content that JavaScript is able to reveal again. -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header" id="site-header">
+    <div class="container header__inner">
+      <a class="header__brand" href="#hero">
+        <img src="assets/images/prs-logo.webp" alt="Pink Ribbon Shop" width="160" height="63">
+      </a>
+
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#hampers">Hampers</a></li>
+          <li><a class="nav__link" href="#branding">Corporate Branding</a></li>
+          <li><a class="nav__link" href="#quote">Bulk Pricing</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav__actions">
+          <a class="btn btn--ghost" href="tel:+919884000783" data-call-link>
+            <img src="assets/icons/icon-phone.svg" alt="" width="24" height="24" aria-hidden="true">
+            <span>Call Us</span>
+          </a>
+          
+          <a class="btn btn--primary" href="#quote">Get a Quote</a>
+        </div>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" type="button"
+              aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+  <div class="nav-scrim" id="nav-scrim" hidden></div>
+
+  <main id="main">
+
+    <!-- ============================= HERO ============================= -->
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow">Premium Corporate Gifting</p>
+          <h1 class="hero__title">Corporate Gifts<br>That Build<br>Meaningful Connections.</h1>
+          <p class="hero__lede">
+            Premium gift hampers curated for employees, clients and business partners,
+            with custom branding, bulk pricing and reliable delivery.
+          </p>
+
+          <div class="hero__ctas">
+            <a class="btn btn--primary btn--lg" href="#quote">Request a Bulk Quote</a>
+            <a class="btn btn--outline btn--lg" href="#hampers">Explore Hampers</a>
+          </div>
+
+          <ul class="trust-list">
+            <li>Custom Branding</li>
+            <li>Bulk Orders</li>
+            <li>Pan-India Delivery</li>
+          </ul>
+        </div>
+
+        <div class="hero__media">
+          <figure class="hero__figure">
+            <img src="assets/images/hero-corporate-gifting.webp"
+                 alt="Premium corporate gift box in deep purple with gold foil motifs, finished with a gold satin ribbon"
+                 width="360" height="540" fetchpriority="high" decoding="async">
+          </figure>
+          <aside class="float-card" aria-label="Delivery highlight">
+            <span class="float-card__figure">500+</span>
+            <span class="float-card__label">Corporate Gifts</span>
+            <span class="float-card__sub">Delivered with care</span>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== WHY CORPORATES ======================== -->
+    <section class="section section--tight" id="why" aria-labelledby="why-title">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">The Aurelia Difference</p>
+          <h2 class="section__title" id="why-title">Why Corporates Choose Us</h2>
+        </header>
+
+        <ul class="value-grid">
+          <li class="value" data-reveal>
+            <img class="value__icon" src="assets/icons/icon-curation.svg" alt="" width="32" height="32" loading="lazy" aria-hidden="true">
+            <span class="value__num">01</span>
+            <h3 class="value__title">Premium Curation</h3>
+            <p class="value__text">Thoughtfully selected gifts for professional relationships.</p>
+          </li>
+          <li class="value" data-reveal>
+            <img class="value__icon" src="assets/icons/icon-branding.svg" alt="" width="32" height="32" loading="lazy" aria-hidden="true">
+            <span class="value__num">02</span>
+            <h3 class="value__title">Custom Branding</h3>
+            <p class="value__text">Add your logo, packaging and personalised messages.</p>
+          </li>
+          <li class="value" data-reveal>
+            <img class="value__icon" src="assets/icons/icon-pricing.svg" alt="" width="32" height="32" loading="lazy" aria-hidden="true">
+            <span class="value__num">03</span>
+            <h3 class="value__title">Bulk Pricing</h3>
+            <p class="value__text">Competitive pricing for large corporate orders.</p>
+          </li>
+          <li class="value" data-reveal>
+            <img class="value__icon" src="assets/icons/icon-delivery.svg" alt="" width="32" height="32" loading="lazy" aria-hidden="true">
+            <span class="value__num">04</span>
+            <h3 class="value__title">Reliable Delivery</h3>
+            <p class="value__text">Coordinated delivery for teams and offices across India.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ======================= PRODUCT SHOWCASE ======================= -->
+    <section class="section section--alt" id="hampers" aria-labelledby="hampers-title">
+      <div class="container">
+        <header class="section__head section__head--center" data-reveal>
+          <p class="eyebrow">The Collection</p>
+          <h2 class="section__title" id="hampers-title">Corporate Gift Hampers</h2>
+          <p class="section__lede">
+            Thoughtfully curated collections for employees, clients, partners and special occasions.
+          </p>
+        </header>
+
+        <ul class="product-grid">
+          <li class="card" data-reveal>
+            <div class="card__media">
+              <img src="assets/images/product1.webp" alt="Executive Luxury Hamper in a dark presentation box with gold ribbon" width="800" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="card__body">
+              <p class="card__category">Leadership &amp; Key Clients</p>
+              <h3 class="card__title">Executive Luxury Hamper</h3>
+              <p class="card__text">Premium gifts for leadership and key clients.</p>
+              <a class="btn btn--outline btn--block" href="#quote" data-quote-cta="Executive Luxury Hamper">Request Quote</a>
+            </div>
+          </li>
+
+          <li class="card" data-reveal>
+            <div class="card__media">
+              <img src="assets/images/product2.webp" alt="Employee Appreciation Box containing a branded mug and gift items" width="800" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="card__body">
+              <p class="card__category">Employee Engagement</p>
+              <h3 class="card__title">Employee Appreciation Box</h3>
+              <p class="card__text">Thoughtful gifts for your team.</p>
+              <a class="btn btn--outline btn--block" href="#quote" data-quote-cta="Employee Appreciation Box">Request Quote</a>
+            </div>
+          </li>
+
+          <li class="card" data-reveal>
+            <div class="card__media">
+              <img src="assets/images/product3.webp" alt="Festive Celebration Hamper with gourmet treats and a candle" width="800" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="card__body">
+              <p class="card__category">Festivals &amp; Milestones</p>
+              <h3 class="card__title">Festive Celebration Hamper</h3>
+              <p class="card__text">Celebrate milestones and festivals together.</p>
+              <a class="btn btn--outline btn--block" href="#quote" data-quote-cta="Festive Celebration Hamper">Request Quote</a>
+            </div>
+          </li>
+
+          <li class="card" data-reveal>
+            <div class="card__media">
+              <img src="assets/images/product4.webp" alt="Premium Wellness Box with botanical candle, tea and self-care essentials" width="800" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="card__body">
+              <p class="card__category">Wellbeing</p>
+              <h3 class="card__title">Premium Wellness Box</h3>
+              <p class="card__text">A meaningful wellness-focused corporate gift.</p>
+              <a class="btn btn--outline btn--block" href="#quote" data-quote-cta="Premium Wellness Box">Request Quote</a>
+            </div>
+          </li>
+
+          <li class="card" data-reveal>
+            <div class="card__media">
+              <img src="assets/images/product5.webp" alt="Client Appreciation Hamper in a monochrome gift box with gold banding" width="800" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="card__body">
+              <p class="card__category">Client Relationships</p>
+              <h3 class="card__title">Client Appreciation Hamper</h3>
+              <p class="card__text">Make every business relationship memorable.</p>
+              <a class="btn btn--outline btn--block" href="#quote" data-quote-cta="Client Appreciation Hamper">Request Quote</a>
+            </div>
+          </li>
+
+          <li class="card" data-reveal>
+            <div class="card__media">
+              <img src="assets/images/product6.webp" alt="New Employee Welcome Kit with branded notebook, bottle and welcome card" width="800" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="card__body">
+              <p class="card__category">Onboarding</p>
+              <h3 class="card__title">New Employee Welcome Kit</h3>
+              <p class="card__text">Start every new journey with a thoughtful welcome.</p>
+              <a class="btn btn--outline btn--block" href="#quote" data-quote-cta="New Employee Welcome Kit">Request Quote</a>
+            </div>
+          </li>
+        </ul>
+
+        <div class="section__foot" data-reveal>
+          <a class="btn btn--primary btn--lg" href="#quote">Request a Corporate Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CORPORATE CUSTOMISATION ==================== -->
+    <section class="section" id="branding" aria-labelledby="branding-title">
+      <div class="container split">
+        <div class="split__media" data-reveal>
+          <img src="assets/images/product3.webp"
+               alt="Gift box embossed with a company logo beside a branded card and champagne ribbon"
+               width="900" height="720" loading="lazy" decoding="async">
+        </div>
+
+        <div class="split__copy" data-reveal>
+          <p class="eyebrow">Corporate Customisation</p>
+          <h2 class="section__title" id="branding-title">Make Every Gift Uniquely Yours</h2>
+          <p class="section__lede">
+            Build a gifting experience around your brand with personalised packaging,
+            branded products and custom messages.
+          </p>
+
+          <ul class="feature-list">
+            <li class="feature">
+              <img class="feature__icon" src="assets/icons/icon-logo-badge.svg" alt="" width="32" height="32" loading="lazy" aria-hidden="true">
+              <div>
+                <span class="feature__num">01</span>
+                <h3 class="feature__title">Logo Branding</h3>
+                <p class="feature__text">Add your company logo to packaging, cards and selected products.</p>
+              </div>
+            </li>
+            <li class="feature">
+              <img class="feature__icon" src="assets/icons/icon-quantity.svg" alt="" width="32" height="32" loading="lazy" aria-hidden="true">
+              <div>
+                <span class="feature__num">02</span>
+                <h3 class="feature__title">Bulk Pricing</h3>
+                <p class="feature__text">Get customised pricing based on quantity and requirements.</p>
+              </div>
+            </li>
+            <li class="feature">
+              <img class="feature__icon" src="assets/icons/icon-sample.svg" alt="" width="32" height="32" loading="lazy" aria-hidden="true">
+              <div>
+                <span class="feature__num">03</span>
+                <h3 class="feature__title">Sample Boxes</h3>
+                <p class="feature__text">Request samples before confirming your bulk order.</p>
+              </div>
+            </li>
+          </ul>
+
+          <a class="btn btn--primary btn--lg" href="#quote">Discuss Your Requirements</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= BULK ORDER PROCESS ======================= -->
+    <section class="section section--alt" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <header class="section__head section__head--center" data-reveal>
+          <p class="eyebrow">How It Works</p>
+          <h2 class="section__title" id="process-title">Corporate Gifting, Made Simple</h2>
+        </header>
+
+        <ol class="steps">
+          <li class="step" data-reveal>
+            <span class="step__num">01</span>
+            <h3 class="step__title">Tell Us Your Requirement</h3>
+            <p class="step__text">Share quantity, budget, occasion and delivery details.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num">02</span>
+            <h3 class="step__title">Choose &amp; Customise</h3>
+            <p class="step__text">Select your hampers and add your branding.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num">03</span>
+            <h3 class="step__title">We Deliver</h3>
+            <p class="step__text">We handle packing, coordination and delivery.</p>
+          </li>
+        </ol>
+
+        <div class="section__foot" data-reveal>
+          <a class="btn btn--primary btn--lg" href="#quote">Start Your Order</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== B2B INQUIRY FORM ======================== -->
+    <section class="section quote" id="quote" aria-labelledby="quote-title">
+      <div class="container quote__inner">
+        <div class="quote__copy" data-reveal>
+          <p class="eyebrow eyebrow--light">Bulk Enquiry</p>
+          <h2 class="section__title section__title--light" id="quote-title">Planning a Corporate Order?</h2>
+          <p class="quote__lede">
+            Tell us what you need. Our gifting team will help you create the right
+            solution for your budget and quantity.
+          </p>
+          <ul class="quote__points">
+            <li>Response within one business day</li>
+            <li>Custom branding &amp; packaging options</li>
+            <li>Volume pricing from 25 gifts upward</li>
+          </ul>
+        </div>
+
+        <div class="quote__form-wrap" data-reveal>
+          <form class="form" id="quote-form" novalidate>
+            <div class="form__grid">
+              <div class="field">
+                <label class="field__label" for="fullName">Full Name</label>
+                <input class="field__input" type="text" id="fullName" name="fullName"
+                       autocomplete="name" aria-describedby="fullName-error">
+                <p class="field__error" id="fullName-error" role="alert"></p>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="phone">Phone Number <span class="req" aria-hidden="true">*</span></label>
+                <input class="field__input" type="tel" id="phone" name="phone"
+                       inputmode="tel" autocomplete="tel" placeholder="+91 90000 00000"
+                       required aria-required="true" aria-describedby="phone-error">
+                <p class="field__error" id="phone-error" role="alert"></p>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="workEmail">Official Email <span class="req" aria-hidden="true">*</span></label>
+                <input class="field__input" type="email" id="workEmail" name="workEmail"
+                       inputmode="email" autocomplete="email" required aria-required="true" aria-describedby="workEmail-error">
+                <p class="field__error" id="workEmail-error" role="alert"></p>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="company">Company Name <span class="req" aria-hidden="true">*</span></label>
+                <input class="field__input" type="text" id="company" name="company"
+                       autocomplete="organization" required aria-required="true" aria-describedby="company-error">
+                <p class="field__error" id="company-error" role="alert"></p>
+              </div>
+
+              <div class="field field--full">
+                <label class="field__label" for="enquiryLocation">Location</label>
+                <input class="field__input" type="text" id="enquiryLocation" name="location"
+                       autocomplete="address-level2" placeholder="City or delivery location"
+                       aria-describedby="enquiryLocation-error">
+                <p class="field__error" id="enquiryLocation-error" role="alert"></p>
+              </div>
+
+              <div class="field field--full">
+                <label class="field__label" for="message">Message</label>
+                <textarea class="field__input field__input--textarea" id="message" name="message" rows="4"
+                          placeholder="Quantity, occasion, branding requirements, delivery timelines…"
+                          aria-describedby="message-error"></textarea>
+                <p class="field__error" id="message-error" role="alert"></p>
+              </div>
+            </div>
+
+            <p class="form__summary" id="form-summary" role="alert" hidden></p>
+
+            <button class="btn btn--gold btn--lg btn--block" type="submit" id="quote-submit">
+              Request Corporate Quote
+            </button>
+            <p class="form__note">We'll get back to you with personalised options and pricing.</p>
+          </form>
+
+          <div class="form-success" id="form-success" hidden tabindex="-1">
+            <span class="form-success__mark" aria-hidden="true">&#10003;</span>
+            <h3 class="form-success__title">Thank you, your enquiry is in.</h3>
+            <p class="form-success__text">
+              Our corporate gifting team will get back to you with personalised options and
+              pricing within one business day.
+            </p>
+            <a class="btn btn--gold" href="#" data-whatsapp target="_blank" rel="noopener">Chat on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================== CLIENT LOGOS ========================== -->
+    <section class="section section--tight" id="clients" aria-labelledby="clients-title">
+      <div class="container">
+        <header class="section__head section__head--center" data-reveal>
+          <h2 class="section__title section__title--sm" id="clients-title">Trusted by Businesses</h2>
+        </header>
+        <ul class="logo-strip" data-reveal>
+          <li class="logo-strip__item"><img src="assets/images/client-logo1.jfif" alt="CaratLane" width="300" height="235" loading="lazy" decoding="async"></li>
+          <li class="logo-strip__item"><img src="assets/images/client-logo2.png" alt="Apollo Hospitals" width="300" height="167" loading="lazy" decoding="async"></li>
+          <li class="logo-strip__item"><img src="assets/images/client-logo3.jfif" alt="InnoServ Digital" width="150" height="143" loading="lazy" decoding="async"></li>
+          <li class="logo-strip__item"><img src="assets/images/client-logo4.png" alt="Genesys" width="300" height="58" loading="lazy" decoding="async"></li>
+          <li class="logo-strip__item"><img src="assets/images/client-logo5.jfif" alt="Drivestream" width="300" height="81" loading="lazy" decoding="async"></li>
+          <li class="logo-strip__item"><img src="assets/images/client-logo6.jfif" alt="EK Homes" width="300" height="86" loading="lazy" decoding="async"></li>
+          <li class="logo-strip__item"><img src="assets/images/client-logo7.jfif" alt="FireEye" width="300" height="300" loading="lazy" decoding="async"></li>
+          <li class="logo-strip__item"><img src="assets/images/client-logo8.png" alt="Jalan Technologies" width="120" height="120" loading="lazy" decoding="async"></li>
+          <li class="logo-strip__item"><img src="assets/images/client-logo9.jfif" alt="Darwinbox" width="300" height="76" loading="lazy" decoding="async"></li>
+          <li class="logo-strip__item"><img src="assets/images/client-logo10.jfif" alt="The Ascott Limited" width="300" height="114" loading="lazy" decoding="async"></li>
+          <li class="logo-strip__item"><img src="assets/images/client-logo11.webp" alt="GradRight" width="300" height="64" loading="lazy" decoding="async"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========================== TESTIMONIALS ========================== -->
+    <section class="section section--alt" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <header class="section__head section__head--center" data-reveal>
+          <p class="eyebrow">Client Feedback</p>
+          <h2 class="section__title" id="testimonials-title">What Our Clients Say</h2>
+        </header>
+
+        <div class="carousel" data-carousel data-reveal>
+          <div class="carousel__viewport">
+            <!-- PLACEHOLDER testimonials: illustrative Indian corporate gifting
+                 scenarios with fictional company names. Replace with real, quoted
+                 feedback you have written permission to publish. Do not attribute
+                 these to the client logos above. -->
+            <ul class="carousel__track" id="testimonial-track">
+              <li class="testimonial" role="group" aria-roledescription="slide" aria-label="Testimonial 1 of 6">
+                <p class="testimonial__stars"><span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="sr-only">Rated 5 out of 5</span></p>
+                <blockquote class="testimonial__quote">We needed 1,200 Diwali hampers across six offices and the dispatch was tracked city by city. Our regional HR leads did not have to chase a single delivery.</blockquote>
+                <footer class="testimonial__author">
+                  <span class="testimonial__name">Priya Raghavan</span>
+                  <span class="testimonial__role">Head of Employee Experience</span>
+                  <span class="testimonial__company">Meghdoot Technologies, Bengaluru</span>
+                </footer>
+              </li>
+              <li class="testimonial" role="group" aria-roledescription="slide" aria-label="Testimonial 2 of 6">
+                <p class="testimonial__stars"><span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="sr-only">Rated 5 out of 5</span></p>
+                <blockquote class="testimonial__quote">Our compliance team needed proper GST invoices and a clean paper trail for client gifting. Everything came through correctly the first time, which is rare.</blockquote>
+                <footer class="testimonial__author">
+                  <span class="testimonial__name">Aditya Kulkarni</span>
+                  <span class="testimonial__role">AVP, Administration</span>
+                  <span class="testimonial__company">Sahyadri Financial Services, Mumbai</span>
+                </footer>
+              </li>
+              <li class="testimonial" role="group" aria-roledescription="slide" aria-label="Testimonial 3 of 6">
+                <p class="testimonial__stars"><span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="sr-only">Rated 5 out of 5</span></p>
+                <blockquote class="testimonial__quote">New joinee kits now go straight to home addresses across eleven states. Candidates post about them before their first day, so it has become part of our employer brand.</blockquote>
+                <footer class="testimonial__author">
+                  <span class="testimonial__name">Neha Sridharan</span>
+                  <span class="testimonial__role">Talent Acquisition Lead</span>
+                  <span class="testimonial__company">Trilok Systems, Hyderabad</span>
+                </footer>
+              </li>
+              <li class="testimonial" role="group" aria-roledescription="slide" aria-label="Testimonial 4 of 6">
+                <p class="testimonial__stars"><span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="sr-only">Rated 5 out of 5</span></p>
+                <blockquote class="testimonial__quote">They understood that a Pongal hamper for our Chennai team and a Diwali hamper for Gurugram are not the same thing. That regional detail mattered to our people.</blockquote>
+                <footer class="testimonial__author">
+                  <span class="testimonial__name">Rakesh Menon</span>
+                  <span class="testimonial__role">Senior Manager, HR Operations</span>
+                  <span class="testimonial__company">Vaigai Industries, Coimbatore</span>
+                </footer>
+              </li>
+              <li class="testimonial" role="group" aria-roledescription="slide" aria-label="Testimonial 5 of 6">
+                <p class="testimonial__stars"><span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="sr-only">Rated 5 out of 5</span></p>
+                <blockquote class="testimonial__quote">We order close to 300 hampers every year for our long service awards. The quality has held up season after season, so we stopped running a vendor comparison.</blockquote>
+                <footer class="testimonial__author">
+                  <span class="testimonial__name">Kavitha Iyer</span>
+                  <span class="testimonial__role">Head of People and Culture</span>
+                  <span class="testimonial__company">Nilgiri Retail Group, Chennai</span>
+                </footer>
+              </li>
+              <li class="testimonial" role="group" aria-roledescription="slide" aria-label="Testimonial 6 of 6">
+                <p class="testimonial__stars"><span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="sr-only">Rated 5 out of 5</span></p>
+                <blockquote class="testimonial__quote">Procurement asked for three options at three price points. The sample boxes reached us in four days and the decision was signed off in one meeting.</blockquote>
+                <footer class="testimonial__author">
+                  <span class="testimonial__name">Sandeep Bhatia</span>
+                  <span class="testimonial__role">Procurement Manager</span>
+                  <span class="testimonial__company">Ashwath Consulting, Pune</span>
+                </footer>
+              </li>
+            </ul>
+          </div>
+
+          <div class="carousel__controls">
+            <button class="carousel__btn" type="button" data-carousel-prev aria-label="Previous testimonials">
+              <span aria-hidden="true">&#8592;</span>
+            </button>
+            <div class="carousel__dots" id="carousel-dots"></div>
+            <button class="carousel__btn" type="button" data-carousel-next aria-label="Next testimonials">
+              <span aria-hidden="true">&#8594;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== FAQ ============================== -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container faq__inner">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">Questions</p>
+          <h2 class="section__title" id="faq-title">Corporate Gifting FAQs</h2>
+          <p class="section__lede">Still unsure about something? Our team is a message away.</p>
+          <a class="btn btn--outline" href="#" data-whatsapp target="_blank" rel="noopener">WhatsApp Us</a>
+        </header>
+
+        <div class="accordion" id="faq-accordion" data-reveal>
+          <div class="accordion__item">
+            <h3 class="accordion__heading">
+              <button class="accordion__trigger" type="button" id="faq-t1" aria-expanded="false" aria-controls="faq-p1">
+                <span>Do you accept bulk corporate orders?</span><span class="accordion__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-p1" role="region" aria-labelledby="faq-t1" hidden>
+              <p>Yes, bulk corporate orders are our core business. We regularly handle orders ranging from 25 hampers for a leadership team to several thousand for company-wide festive gifting.</p>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <h3 class="accordion__heading">
+              <button class="accordion__trigger" type="button" id="faq-t2" aria-expanded="false" aria-controls="faq-p2">
+                <span>Can you add our company logo?</span><span class="accordion__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-p2" role="region" aria-labelledby="faq-t2" hidden>
+              <p>We can apply your logo to outer packaging, greeting cards, ribbons and selected products inside the hamper. Share a vector file (AI, EPS or SVG) and we'll send a digital mock-up for approval before production.</p>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <h3 class="accordion__heading">
+              <button class="accordion__trigger" type="button" id="faq-t3" aria-expanded="false" aria-controls="faq-p3">
+                <span>Do you provide customised packaging?</span><span class="accordion__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-p3" role="region" aria-labelledby="faq-t3" hidden>
+              <p>Yes. Box colour, finish, ribbon, insert cards and personalised messages can all be tailored to your brand guidelines. Fully bespoke packaging is available on larger orders.</p>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <h3 class="accordion__heading">
+              <button class="accordion__trigger" type="button" id="faq-t4" aria-expanded="false" aria-controls="faq-p4">
+                <span>What is the minimum order quantity?</span><span class="accordion__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-p4" role="region" aria-labelledby="faq-t4" hidden>
+              <p>Standard hampers start at 25 units. Custom-branded packaging typically starts at 50 units, since it involves a dedicated print run.</p>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <h3 class="accordion__heading">
+              <button class="accordion__trigger" type="button" id="faq-t5" aria-expanded="false" aria-controls="faq-p5">
+                <span>Can I request a sample before placing a bulk order?</span><span class="accordion__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-p5" role="region" aria-labelledby="faq-t5" hidden>
+              <p>Absolutely. We ship a sample box so your team can review quality and presentation first-hand. The sample cost is adjusted against your final invoice once the bulk order is confirmed.</p>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <h3 class="accordion__heading">
+              <button class="accordion__trigger" type="button" id="faq-t6" aria-expanded="false" aria-controls="faq-p6">
+                <span>Do you offer bulk pricing?</span><span class="accordion__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-p6" role="region" aria-labelledby="faq-t6" hidden>
+              <p>Pricing is tiered by quantity and per-gift budget. Share your numbers through the enquiry form and you'll receive a structured quote with options at different price points.</p>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <h3 class="accordion__heading">
+              <button class="accordion__trigger" type="button" id="faq-t7" aria-expanded="false" aria-controls="faq-p7">
+                <span>Do you deliver across India?</span><span class="accordion__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-p7" role="region" aria-labelledby="faq-t7" hidden>
+              <p>Yes. We deliver to offices nationwide and can also ship individually to employee or client home addresses from a single list you provide.</p>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <h3 class="accordion__heading">
+              <button class="accordion__trigger" type="button" id="faq-t8" aria-expanded="false" aria-controls="faq-p8">
+                <span>How long does a corporate order take?</span><span class="accordion__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-p8" role="region" aria-labelledby="faq-t8" hidden>
+              <p>Standard hampers ship within 7–10 working days. Custom-branded orders take 12–15 working days from artwork approval. Festive periods book out early, so we recommend confirming in advance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ FINAL CTA ============================ -->
+    <section class="final-cta" aria-labelledby="final-cta-title">
+      <div class="container final-cta__inner" data-reveal>
+        <h2 class="final-cta__title" id="final-cta-title">Let's Create Gifts Worth Remembering.</h2>
+        <p class="final-cta__lede">
+          From employee appreciation to client gifting, we'll help you create a corporate
+          gifting experience that represents your brand.
+        </p>
+        <div class="final-cta__actions">
+          <a class="btn btn--gold btn--lg" href="#quote">Request a Corporate Quote</a>
+          <a class="btn btn--outline-light btn--lg" href="#" data-whatsapp target="_blank" rel="noopener">Chat on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= LOCATION ============================= -->
+    <section class="section section--alt map-section" id="location" aria-labelledby="location-title">
+      <div class="container">
+        <header class="section__head section__head--center" data-reveal>
+          <p class="eyebrow">Find Us</p>
+          <h2 class="section__title" id="location-title">Visit Our Store</h2>
+          <p class="section__lede">
+            Drop by to see our hampers and packaging in person, or get in touch and
+            our team will bring samples to your office.
+          </p>
+        </header>
+
+        <div class="map" data-reveal>
+          <div class="map__frame">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7773.248393254344!2d80.24056588583443!3d13.059576300443393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267a6a76e3fcf%3A0x5909951cc9fabc55!2sPink%20Ribbon%20Shop!5e0!3m2!1sen!2sin!4v1788263179941!5m2!1sen!2sin"
+              title="Map showing the location of Pink Ribbon Shop"
+              width="600" height="450"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+
+          <div class="map__actions">
+            <a class="btn btn--outline"
+               href="https://www.google.com/maps/search/?api=1&amp;query=Pink+Ribbon+Shop"
+               target="_blank" rel="noopener">Get Directions</a>
+            <a class="btn btn--ghost" href="tel:+919884000783" data-call-link>
+              <img src="assets/icons/icon-phone.svg" alt="" width="24" height="24" aria-hidden="true">
+              <span>Call the Store</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================== FOOTER ============================== -->
+  <footer class="footer" id="contact">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img class="footer__logo" src="assets/images/prs-logo.webp" alt="Pink Ribbon Shop logo" width="160" height="63" loading="lazy">
+        <p class="footer__tagline">Premium corporate gifting solutions for modern businesses.</p>
+        <p class="footer__delivery">Pan-India Corporate Delivery</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Footer">
+        <h2 class="footer__title">Explore</h2>
+        <ul class="footer__list">
+          <li><a href="#hampers">Hampers</a></li>
+          <li><a href="#branding">Corporate Branding</a></li>
+          <li><a href="#quote">Bulk Pricing</a></li>
+          <li><a href="#why">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__col">
+        <h2 class="footer__title">Corporate Contact</h2>
+        <ul class="footer__list footer__list--contact">
+          <li>
+            <img src="assets/icons/icon-phone.svg" alt="" width="24" height="24" loading="lazy" aria-hidden="true">
+            <span class="footer__phones">
+              <a href="tel:+919884000783">+91 98840 00783</a>
+              <a href="tel:+919884000743">+91 98840 00743</a>
+              <a href="tel:+919176028008">+91 91760 28008</a>
+            </span>
+          </li>
+          <li>
+            <img src="assets/icons/icon-mail.svg" alt="" width="24" height="24" loading="lazy" aria-hidden="true">
+            <a href="mailto:corporate@aurelia-gifting.com">info@pinkribbonshop.com</a>
+          </li>
+          <li>
+            <img src="assets/icons/icon-whatsapp.svg" alt="" width="24" height="24" loading="lazy" aria-hidden="true">
+            <a href="#" data-whatsapp target="_blank" rel="noopener">WhatsApp Enquiry</a>
+          </li>
+          <li>
+            <img src="assets/icons/icon-location.svg" alt="" width="24" height="24" loading="lazy" aria-hidden="true">
+            <address>2nd Street,3 Haddows Rd,Nungambakkam, Chennai - 600006.</address>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h2 class="footer__title">Payments Accepted</h2>
+        <ul class="payments">
+          <li><img src="assets/icons/pay-visa.svg" alt="Visa" width="64" height="40" loading="lazy"></li>
+          <li><img src="assets/icons/pay-mastercard.svg" alt="Mastercard" width="64" height="40" loading="lazy"></li>
+          <li><img src="assets/icons/pay-rupay.svg" alt="RuPay" width="64" height="40" loading="lazy"></li>
+          <li><img src="assets/icons/pay-upi.svg" alt="UPI" width="64" height="40" loading="lazy"></li>
+          <li><img src="assets/icons/pay-netbanking.svg" alt="Net banking" width="64" height="40" loading="lazy"></li>
+        </ul>
+        <p class="footer__gst">GST invoices issued on every corporate order.</p>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>&copy; <span id="year">2026</span> PinkribbonShop. All Rights Reserved.</p>
+      <p class="footer__legal"><a href="#">Privacy Policy</a> · <a href="#">Terms</a></p>
+    </div>
+  </footer>
+
+  <!-- ======================= FLOATING WHATSAPP CTA ======================= -->
+  <a class="wa-float" id="wa-float" href="#" data-whatsapp target="_blank" rel="noopener"
+     aria-label="Chat on WhatsApp">
+    <img src="assets/icons/icon-whatsapp.svg" alt="" width="24" height="24" aria-hidden="true">
+    <span class="wa-float__label">Chat on WhatsApp</span>
+  </a>
+
+  <!-- ==================== MOBILE STICKY BOTTOM CTA ==================== -->
+  <div class="mobile-cta" id="mobile-cta">
+    <a class="btn btn--primary btn--block" href="#quote">Request a Corporate Quote</a>
+  </div>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
