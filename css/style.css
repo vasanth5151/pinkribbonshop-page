@@ -120,6 +120,18 @@ button { font: inherit; color: inherit; }
   padding-inline: var(--container-pad);
 }
 
+/* Grid and flex items default to a min-content floor, so a single unwrappable
+   child (a nowrap .btn with a long label) can set a width the page will not go
+   below and push the document wider than the viewport. Opt layout children out. */
+.hero__inner > *,
+.split > *,
+.quote__inner > *,
+.faq__inner > *,
+.value-grid > *,
+.product-grid > *,
+.steps > *,
+.footer__grid > * { min-width: 0; }
+
 .sr-only {
   position: absolute;
   width: 1px; height: 1px;
@@ -1341,6 +1353,35 @@ button { font: inherit; color: inherit; }
 
   .map__frame { aspect-ratio: 4 / 3; }
   .map__actions .btn { width: 100%; }
+
+  /* Buttons are nowrap by default, which is right for short desktop labels but
+     makes a long CTA ("Discuss Your Diwali Gifting Requirements") wider than a
+     phone screen. Let labels wrap and give the long CTAs the full column. */
+  .btn { white-space: normal; }
+  .btn--lg { --btn-px: 1.25rem; }
+  .section__foot .btn,
+  .section__head .btn,
+  .split__copy > .btn,
+  .final-cta__actions .btn { width: 100%; }
+
+  /* Headings wrap to the column instead of spilling past the screen edge */
+  .hero__title br { display: none; }
+  .hero__title,
+  .section__title,
+  .final-cta__title { overflow-wrap: break-word; }
+
+  /* Touch targets: carousel controls kept round rather than squeezed by flex,
+     and inline links given enough vertical room to tap reliably. */
+  .carousel__btn { flex: 0 0 auto; }
+  .carousel__controls { gap: var(--space-sm); }
+  .carousel__dots { flex-wrap: wrap; justify-content: center; min-width: 0; row-gap: .25rem; }
+  .carousel__dot { width: 22px; height: 44px; padding: 0; }
+  .footer__list a,
+  .footer__legal a { display: inline-block; padding-block: .4rem; }
+  .header__brand { display: inline-flex; align-items: center; min-height: 44px; }
+
+  /* Keep micro-typography from dropping below 12px on small screens */
+  :root { --fs-eyebrow: .75rem; }
 }
 
 /* ---- Motion preferences ---- */
