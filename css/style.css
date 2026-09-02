@@ -1292,13 +1292,18 @@ button { font: inherit; color: inherit; }
   .nav__actions .btn--ghost span { display: inline; }
 
   .hero__inner { grid-template-columns: 1fr; }
-  .hero__media { order: -1; max-width: 560px; margin-inline: auto; width: 100%; }
+  /* Copy leads on small screens: the headline and CTAs come first, the
+     product image follows. Source order already does this, so no reordering. */
+  .hero__media { max-width: 560px; margin-inline: auto; width: 100%; margin-top: var(--space-lg); }
   .hero__figure img { aspect-ratio: 4 / 3; }
   .float-card { left: auto; right: var(--space-md); bottom: calc(var(--space-md) * -1); }
   .hero__title { max-width: 14ch; }
 
   .split { grid-template-columns: 1fr; }
-  .split__media { order: -1; }
+  /* The branding section lists the image first in the markup; on small
+     screens the copy leads instead. */
+  .split__copy { order: -1; }
+  .split__media { order: 0; }
 
   .product-grid { grid-template-columns: repeat(2, 1fr); }
   .steps { grid-template-columns: 1fr; }
