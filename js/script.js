@@ -1,15 +1,87 @@
-/* ==========================================================================
-   Aurelia — Premium Corporate Gifting
-   Vanilla JS: header, mobile nav, reveal, carousel, accordion, form, WhatsApp.
-   No third-party libraries, no API keys, no credentials.
+/* GOOGLE APPS SCRIPT CODE (Copy to Google Apps Script Editor)
+   ----------------------------------------------------------
+   
+   const SHEET_NAME = "PRS Landingpage Form Submissions";
+
+   function doPost(e) {
+     try {
+       const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(SHEET_NAME);
+       
+       if (!sheet) {
+         return ContentService.createTextOutput(
+           JSON.stringify({ success: false, error: "Sheet not found. Create sheet named '" + SHEET_NAME + "'" })
+         ).setMimeType(ContentService.MimeType.JSON);
+       }
+
+       const params = e.parameter;
+       const timestamp = new Date();
+       const rowData = [
+         timestamp,
+         params.fullName || "",
+         params.phone || "",
+         params.workEmail || "",
+         params.company || "",
+         params.location || "",
+         params.message || ""
+       ];
+
+       sheet.appendRow(rowData);
+       Logger.log("Form submitted: " + JSON.stringify(params));
+
+       return ContentService.createTextOutput(
+         JSON.stringify({ success: true, message: "Form submitted successfully" })
+       ).setMimeType(ContentService.MimeType.JSON);
+
+     } catch (error) {
+       Logger.log("Error: " + error);
+       return ContentService.createTextOutput(
+         JSON.stringify({ success: false, error: error.toString() })
+       ).setMimeType(ContentService.MimeType.JSON);
+     }
+   }
+
+   function doGet(e) {
+     try {
+       const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(SHEET_NAME);
+       
+       if (!sheet) {
+         return ContentService.createTextOutput(
+           JSON.stringify({ success: false, error: "Sheet not found. Create sheet named '" + SHEET_NAME + "'" })
+         ).setMimeType(ContentService.MimeType.JSON);
+       }
+
+       const params = e.parameter;
+       const timestamp = new Date();
+       const rowData = [
+         timestamp,
+         params.fullName || "",
+         params.phone || "",
+         params.workEmail || "",
+         params.company || "",
+         params.location || "",
+         params.message || ""
+       ];
+
+       sheet.appendRow(rowData);
+       Logger.log("Form submitted via GET: " + JSON.stringify(params));
+
+       return ContentService.createTextOutput(
+         JSON.stringify({ success: true, message: "Form submitted successfully" })
+       ).setMimeType(ContentService.MimeType.JSON);
+
+     } catch (error) {
+       Logger.log("Error: " + error);
+       return ContentService.createTextOutput(
+         JSON.stringify({ success: false, error: error.toString() })
+       ).setMimeType(ContentService.MimeType.JSON);
+     }
+   }
+   
    ========================================================================== */
 
 (function () {
   'use strict';
 
-  /* ------------------------------------------------------------------ */
-  /* SITE CONFIG — edit these three values to go live                    */
-  /* ------------------------------------------------------------------ */
   var CONFIG = {
     // WhatsApp number in international format, digits only (country code first).
     whatsappNumber: '919884000783',
@@ -410,26 +482,54 @@
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending…';
 
-      /* ----------------------------------------------------------------
-         Wire this up to your backend or form service. Post to your own
-         endpoint — never place API keys or credentials in this file.
+      /* ================================================================
+         Send form data to Google Apps Script (configured in HTML)
+         The script stores data in Google Sheets automatically.
+      ================================================================ */
+      var scriptUrl = window.GOOGLE_FORMS_CONFIG && window.GOOGLE_FORMS_CONFIG.SCRIPT_URL;
 
-         fetch('/api/corporate-enquiry', {
-           method: 'POST',
-           headers: { 'Content-Type': 'application/json' },
-           body: JSON.stringify(payload)
-         }).then(...)
-      ---------------------------------------------------------------- */
-      window.setTimeout(function () {
-        if (window.console && console.info) {
-          console.info('Corporate enquiry ready to submit:', payload);
-        }
-        form.hidden = true;
-        if (success) {
-          success.hidden = false;
-          success.focus();
-        }
-      }, 650);
+      if (!scriptUrl) {
+        // Fallback if Google Sheets not configured
+        console.warn('Google Sheets Script URL not configured. Check GOOGLE_FORMS_CONFIG in HTML.');
+        window.setTimeout(function () {
+          form.hidden = true;
+          if (success) {
+            success.hidden = false;
+            success.focus();
+          }
+        }, 650);
+        return;
+      }
+
+      // Build query string for Google Apps Script (GET request required)
+      var queryString = Object.keys(payload)
+        .map(function (key) { return encodeURIComponent(key) + '=' + encodeURIComponent(payload[key]); })
+        .join('&');
+
+      fetch(scriptUrl + '?' + queryString, {
+        method: 'GET',
+        mode: 'no-cors'
+      })
+        .then(function () {
+          // Google Apps Script executed (no-cors mode doesn't return response)
+          if (window.console && console.info) {
+            console.info('Corporate enquiry submitted to Google Sheets:', payload);
+          }
+          form.hidden = true;
+          if (success) {
+            success.hidden = false;
+            success.focus();
+          }
+        })
+        .catch(function (error) {
+          console.error('Error submitting form:', error);
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Request Corporate Quote';
+          if (summary) {
+            summary.textContent = 'Error submitting form. Please try again.';
+            summary.hidden = false;
+          }
+        });
     });
 
     // Pre-fill the message when a product card's "Request Quote" is used.
